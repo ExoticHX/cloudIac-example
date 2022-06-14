@@ -29,11 +29,6 @@ resource "alicloud_security_group_rule" "allow_all_tcp" {
   cidr_ip           = "0.0.0.0/0"
 }
 
-resource "alicloud_ecs_key_pair" "default" {
-  key_pair_name = var.key_name
-  public_key    = var.public_key
-}
-
 resource "alicloud_instance" "web" {
   count                = var.instance_number
 
