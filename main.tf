@@ -39,7 +39,7 @@ resource "alicloud_instance" "web" {
   image_id             = "ubuntu_18_04_64_20G_alibase_20190624.vhd"
   instance_name        = var.instance_name
 
-  key_name   = alicloud_ecs_key_pair.default.key_pair_name
+  key_name   = var.key_name
   vswitch_id = alicloud_vswitch.default.id
 
   internet_max_bandwidth_out = 1
